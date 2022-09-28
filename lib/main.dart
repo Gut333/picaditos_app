@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const SizedBox(width: 10,),
+            const SizedBox(width: 2,),
             _circleAppBar(),
 
           ],
@@ -112,8 +112,8 @@ class _HomePageState extends State<HomePage> {
           ),
 
           Container(
-          height: 55,
-          width: 55,
+          height: 50,
+          width: 50,
           decoration: BoxDecoration(
             color: const Color.fromARGB(255, 155, 34, 65),
             borderRadius: const BorderRadius.all(Radius.circular(40)),
