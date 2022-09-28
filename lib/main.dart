@@ -53,7 +53,6 @@ class _HomePageState extends State<HomePage> {
 
   }
 
-
   _customAppBar(){
     return AppBar(
       toolbarHeight: 75,
@@ -68,13 +67,10 @@ class _HomePageState extends State<HomePage> {
           children: [
             const SizedBox(width: 2,),
             _circleAppBar(),
-
           ],
         ),
       ),
     );
-
-
 
   }
 
@@ -102,9 +98,9 @@ class _HomePageState extends State<HomePage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                          Text("TEAM MAFUBA",
-                          style: TextStyle(color: Colors.white,fontSize: 13),
-                        ),
+                    Text("TEAM MAFUBA",
+                      style: TextStyle(color: Colors.white,fontSize: 13),
+                    ),
                   ],
                 ),
               ),
@@ -112,148 +108,37 @@ class _HomePageState extends State<HomePage> {
           ),
 
           Container(
-          height: 50,
-          width: 50,
-          decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 155, 34, 65),
-            borderRadius: const BorderRadius.all(Radius.circular(40)),
-            border: Border.all(color: Colors.white,width: 1),
-          ),
+            height: 50,
+            width: 50,
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 155, 34, 65),
+              borderRadius: const BorderRadius.all(Radius.circular(40)),
+              border: Border.all(color: Colors.white,width: 1),
+            ),
             child: const Icon(Icons.shield_sharp,color: Colors.white,size: 35,),
-        ),
-
-
-
-      ],
-      ),
-    );
-  }
-
-
-
-
-  _drawerModule(){
-    return Drawer(
-
-      width: 200,
-      backgroundColor: const Color.fromARGB(255, 30, 30, 30),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            height:50,
-            width: double.infinity,
-            decoration:  BoxDecoration(
-              border: Border.all(color: Colors.black),
-              gradient: const LinearGradient(colors: [
-                Color.fromARGB(255, 55, 65, 77),
-                Color.fromARGB(255, 155, 34, 65)
-              ]),
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(200),
-                bottomLeft: Radius.circular(200),
-              )
-            ),
-
-            child: const Center(
-              child: Text("FORMACIONES",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 2,
-                ),
-              ),
-            ),
           ),
-          const SizedBox(height: 20),
-          Expanded(child: ListView(
-            children: const [
-              TeamSquadItem(),
-              TeamSquadItem(),
-              TeamSquadItem(),
 
-            ],
-          )),
+
 
         ],
       ),
     );
   }
 
-
-  _playerCard(){
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        height: 250,
-        width: 150,
-        decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 55, 65, 77),
-          borderRadius: const BorderRadius.all(Radius.circular(10)),
-          border: Border.all(
-            color:const Color.fromARGB(255, 193, 245, 79),
-            width: 1.0,
-
-          ),
-
-        ),
-      ),
-    );
-
-
   }
 
 
 
-  }
-
-
-class TeamSquadItem extends StatefulWidget {
-  const TeamSquadItem({Key? key}) : super(key: key);
-
-  @override
-  State<TeamSquadItem> createState() => _TeamSquadItemState();
-}
-
-class _TeamSquadItemState extends State<TeamSquadItem> {
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        left: 30,
-        top: 5,
-        bottom: 5,
-      ),
-      child: Container(
-        height: 50,
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          color: Color.fromARGB(255, 55, 65, 77),
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(200),
-            bottomLeft: Radius.circular(200),
-          ),
-        ),
-        child: GestureDetector(
-          onTap: _setSquad,
-          child: Center(child: Text("DEFENSIVA")),//como hacer que se setee una squad personalizada ???
-        ),
-      ),
-    );
-  }
-
-  _setSquad(){
-    setState(() {
-
-
-    });
 
 
 
-  }
 
-}
+
+
+
+
+
+
 
 
 /////////////////CUSTOM COLORS//////////////////////////////////////////
