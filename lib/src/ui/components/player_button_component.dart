@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class PlayerButtonWidget extends StatefulWidget {
   const PlayerButtonWidget(
       {Key? key}) : super(key: key);
@@ -27,7 +25,7 @@ class _PlayerButtonWidgetState extends State<PlayerButtonWidget> {
       left: offset.dx,
       top: offset.dy,
       child: GestureDetector(
-        child: _playerButton(),
+        child: _playerCircle(),
         onPanUpdate: (details){
           setState(() {
             offset = Offset(offset.dx + details.delta.dx,
@@ -41,7 +39,7 @@ class _PlayerButtonWidgetState extends State<PlayerButtonWidget> {
 
   }
 
-  _playerButton(){
+  _playerCircle(){
     return Padding(
       padding: const EdgeInsets.all(40.0),
       child: Container(
@@ -58,5 +56,6 @@ class _PlayerButtonWidgetState extends State<PlayerButtonWidget> {
       ),
     );
   }
+
 
 }

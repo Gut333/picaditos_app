@@ -9,16 +9,6 @@ class DrawTactics extends StatefulWidget {
 class _DrawTacticsState extends State<DrawTactics> {
   final _strokes = <Path>[];
 
-  void _startStroke(double x, double y) {
-    _strokes.add(Path()..moveTo(x, y));
-  }
-
-  void _moveStroke(double x, double y) {
-    setState(() {
-      _strokes.last.lineTo(x, y);
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -30,7 +20,9 @@ class _DrawTacticsState extends State<DrawTactics> {
           details.localPosition.dx,
           details.localPosition.dy,
         ),
-        child: Container(
+        onDoubleTap: _cleanStroke,
+
+        child: SizedBox(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: CustomPaint(
@@ -40,6 +32,27 @@ class _DrawTacticsState extends State<DrawTactics> {
       );
 
   }
+
+  void _startStroke(double x, double y) {
+    _strokes.add(Path()..moveTo(x, y));
+  }
+
+  void _moveStroke(double x, double y) {
+    setState(() {
+      _strokes.last.lineTo(x, y);
+    });
+  }
+
+  void _cleanStroke(){
+    setState(() {
+      _strokes.clear();
+
+    });
+
+  }
+
+
+
 }
 
 class DrawingPainter extends CustomPainter {
@@ -54,7 +67,6 @@ class DrawingPainter extends CustomPainter {
         ..color = const Color.fromARGB(255, 155, 34, 65)
         ..style = PaintingStyle.stroke
         ..strokeCap = StrokeCap.round;
-
 
       canvas.drawPath(stroke, paint);
     }

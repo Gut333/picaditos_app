@@ -21,40 +21,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class PlayerArenaIcon extends StatelessWidget {
-  const PlayerArenaIcon({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: _customIcon(),
-    );
-
-
-  }
-
-  _customIcon (){
-    return Expanded(
-      child: Container(
-        height: 40,
-        width: 40,
-        decoration:  BoxDecoration(
-          color: const Color.fromARGB(255, 22, 148, 251),
-          borderRadius: const BorderRadius.all(Radius.circular(20)),
-          border: Border.all(
-            color: Colors.white70,
-            width: 3,
-          ),
-
-        ),
-
-
-      ),
-    );
-  }
-
-
-}
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -70,7 +36,7 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 55, 65, 77),
-        appBar: _appBarModuleTest(),
+        appBar: _customAppBar(),
         body: Stack(
           children: const [
             SoccerField(),
@@ -79,7 +45,6 @@ class _HomePageState extends State<HomePage> {
             PlayerButtonWidget(),
             PlayerButtonWidget(),
             PlayerButtonWidget(),
-
           ],
         ),
 
@@ -89,9 +54,7 @@ class _HomePageState extends State<HomePage> {
   }
 
 
-
-
-  _appBarModuleTest(){
+  _customAppBar(){
     return AppBar(
       toolbarHeight: 75,
       backgroundColor: Colors.transparent,
@@ -123,7 +86,7 @@ class _HomePageState extends State<HomePage> {
           Row(
 
             children: [
-              SizedBox(width: 30,),
+              const SizedBox(width: 30,),
               Container(
                 height: 40,
                 width: 200,
@@ -142,15 +105,11 @@ class _HomePageState extends State<HomePage> {
                           Text("TEAM MAFUBA",
                           style: TextStyle(color: Colors.white,fontSize: 13),
                         ),
-
-
                   ],
                 ),
               ),
             ],
           ),
-
-
 
           Container(
           height: 55,
@@ -167,21 +126,6 @@ class _HomePageState extends State<HomePage> {
 
       ],
       ),
-    );
-  }
-
-  _menuAppBar(){
-    return Container(
-      height: 30,
-      width: 30,
-      decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 155, 34, 65),
-        borderRadius: BorderRadius.all(Radius.circular(40)),
-        border: Border.all(color: Colors.white,width: 2),
-      ),
-
-
-
     );
   }
 
@@ -312,10 +256,6 @@ class _TeamSquadItemState extends State<TeamSquadItem> {
 }
 
 
-
-
-
-
 /////////////////CUSTOM COLORS//////////////////////////////////////////
 // CustomLime
 // Color.fromARGB(255, 193, 245, 79)
@@ -338,4 +278,3 @@ class _TeamSquadItemState extends State<TeamSquadItem> {
 // CustomWhite
 // Color.fromARGB(255, 233, 231, 236)
 /////////////////////////////////////////////////////////////////////
-
