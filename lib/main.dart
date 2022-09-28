@@ -1,14 +1,10 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:picaditos_app/src/ui/components/draw_tactics_component.dart';
 import 'package:picaditos_app/src/ui/components/player_button_component.dart';
 import 'package:picaditos_app/src/ui/components/soccer_arena_component.dart';
 import 'dart:ui';
 
-
 // import 'package:mvc_pattern/mvc_pattern.dart';
-
 
 void main() => runApp(const MyApp());
 
@@ -21,12 +17,9 @@ class MyApp extends StatelessWidget {
       title: "Picaditos Manager",
       debugShowCheckedModeBanner: false,
       home: HomePage(),
-
     );
-
   }
 }
-
 
 class PlayerArenaIcon extends StatelessWidget {
   const PlayerArenaIcon({Key? key}) : super(key: key);
@@ -63,7 +56,6 @@ class PlayerArenaIcon extends StatelessWidget {
 
 }
 
-
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -72,16 +64,13 @@ class HomePage extends StatefulWidget {
 }
 
 
-
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 55, 65, 77),
-        appBar: _appBarModule(),
-     //   bottomNavigationBar: _bottomNavigationModule(),
-        drawer: _drawerModule(),
+        appBar: _appBarModuleTest(),
         body: Stack(
           children: const [
             SoccerField(),
@@ -99,47 +88,109 @@ class _HomePageState extends State<HomePage> {
 
   }
 
-  _appBarModule(){
+
+
+
+  _appBarModuleTest(){
     return AppBar(
-      leadingWidth: 30,
+      toolbarHeight: 75,
       backgroundColor: Colors.transparent,
       shadowColor: Colors.transparent,
       flexibleSpace: Container(
-        height: 60,
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.black),
-          borderRadius: const BorderRadius.only(
-            bottomRight: Radius.circular(400),
-            topRight: Radius.circular(400),
-          ),
-              gradient: const LinearGradient(
-                  colors: [
-                    Color.fromARGB(255, 55, 65, 77),
-                    Color.fromARGB(255, 155, 34, 65)]),
+        color: Colors.transparent,
+        width: double.infinity,
+        height: double.infinity,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            const SizedBox(width: 10,),
+            _circleAppBar(),
+
+          ],
         ),
       ),
-      toolbarHeight: 50,
-      centerTitle: true,
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const [
-          Text("TU EQUIPO",
-            style: TextStyle(
-              letterSpacing: 5,
-              fontSize: 15,
-              fontWeight: FontWeight.bold,
-            ),
+    );
 
+
+
+  }
+
+  _circleAppBar(){
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Stack(
+        children: [
+          Row(
+
+            children: [
+              SizedBox(width: 30,),
+              Container(
+                height: 40,
+                width: 200,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 155, 34, 65),
+                  borderRadius: const BorderRadius.all(Radius.circular(40)),
+                  border: Border.all(color: Colors.white,width: 1),
+                  gradient: const LinearGradient(
+                      colors: [
+                        Color.fromARGB(255, 55, 65, 77),
+                        Color.fromARGB(255, 155, 34, 65)]),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                          Text("TEAM MAFUBA",
+                          style: TextStyle(color: Colors.white,fontSize: 13),
+                        ),
+
+
+                  ],
+                ),
+              ),
+            ],
           ),
-        ],
+
+
+
+          Container(
+          height: 55,
+          width: 55,
+          decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 155, 34, 65),
+            borderRadius: const BorderRadius.all(Radius.circular(40)),
+            border: Border.all(color: Colors.white,width: 1),
+          ),
+            child: const Icon(Icons.shield_sharp,color: Colors.white,size: 35,),
+        ),
+
+
+
+      ],
       ),
+    );
+  }
+
+  _menuAppBar(){
+    return Container(
+      height: 30,
+      width: 30,
+      decoration: BoxDecoration(
+        color: const Color.fromARGB(255, 155, 34, 65),
+        borderRadius: BorderRadius.all(Radius.circular(40)),
+        border: Border.all(color: Colors.white,width: 2),
+      ),
+
 
 
     );
   }
 
+
+
+
   _drawerModule(){
     return Drawer(
+
       width: 200,
       backgroundColor: const Color.fromARGB(255, 30, 30, 30),
       child: Column(
@@ -214,13 +265,6 @@ class _HomePageState extends State<HomePage> {
   }
 
 
-/////////////////////////////////////////////////////////////////////////
-
-
-
-////////////////////////////////////////////////////////////////////
-
-
 class TeamSquadItem extends StatefulWidget {
   const TeamSquadItem({Key? key}) : super(key: key);
 
@@ -271,12 +315,8 @@ class _TeamSquadItemState extends State<TeamSquadItem> {
 
 
 
-////////////////////////////////////////////////////////////////////////
 
-
-
-
-// PicaditosManagerCustomColors :
+/////////////////CUSTOM COLORS//////////////////////////////////////////
 // CustomLime
 // Color.fromARGB(255, 193, 245, 79)
 //
@@ -297,8 +337,5 @@ class _TeamSquadItemState extends State<TeamSquadItem> {
 //
 // CustomWhite
 // Color.fromARGB(255, 233, 231, 236)
-
-
-
 /////////////////////////////////////////////////////////////////////
 

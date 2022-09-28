@@ -13,7 +13,7 @@ class SoccerField extends StatelessWidget {
           color: const Color.fromARGB(255, 30, 30, 30),
           child: Stack(
             children: [
-              _fieldBackground(),
+              _fieldBorderLines(),
               DrawTactics(),
             ],
           ),
@@ -22,7 +22,8 @@ class SoccerField extends StatelessWidget {
     );
   }
 
-  _fieldBackground(){
+
+  _fieldBorderLines(){
     return Container(
       decoration: BoxDecoration(
         border: Border.all(
