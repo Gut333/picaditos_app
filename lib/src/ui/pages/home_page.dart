@@ -21,8 +21,14 @@ class _HomePageState extends State<HomePage> {
         appBar: _customAppBar(),
         body: Stack(
           children: const [
-            SoccerField(),
-            PlayerButtonWidget(backgroundColor: Colors.white70,),
+             SoccerField(),
+            PlayerButtonWidget(),
+            PlayerButtonWidget(),
+            PlayerButtonWidget2(),
+            PlayerButtonWidget2(),
+            PlayerButtonWidget(),
+
+
 
           ],
         ),
