@@ -22,7 +22,6 @@ class SoccerField extends StatelessWidget {
     );
   }
 
-
   _fieldBorderLines(){
     return Container(
       decoration: BoxDecoration(
@@ -89,6 +88,5 @@ class SoccerField extends StatelessWidget {
       ),
     );
   }
-
 
 }
