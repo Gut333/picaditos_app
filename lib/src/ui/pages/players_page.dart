@@ -4,29 +4,24 @@ import 'package:picaditos_app/main.dart';
 import '../components/player_button_component.dart';
 import '../components/soccer_arena_component.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class PlayersPage extends StatefulWidget {
+  const PlayersPage({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<PlayersPage> createState() => _PlayersPage();
 }
 
-class _HomePageState extends State<HomePage> {
+class _PlayersPage extends State<PlayersPage> {
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 55, 65, 77),
+        backgroundColor: const Color.fromARGB(255, 233, 231, 236)  ,
         appBar: _customAppBar(),
-        body: Stack(
-          children: [
-             const SoccerField(),
-            PlayerButtonWidget(buttonColor: Colors.redAccent),
-            PlayerButtonWidget(buttonColor: Colors.indigo),
-            PlayerButtonWidget(buttonColor: Colors.teal),
-            PlayerButtonWidget(buttonColor: Colors.orangeAccent),
-            PlayerButtonWidget(buttonColor: Colors.lightBlue),
+        body: ListView(
+          children: const [
+            PlayerFullData(),
 
           ],
         ),
@@ -45,9 +40,10 @@ class _HomePageState extends State<HomePage> {
         height: double.infinity,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            const SizedBox(width: 2,),
-            _circleAppBar(),
+          children: const [
+             SizedBox(width: 10,),
+            Icon(Icons.arrow_back),
+            //_circleAppBar(),
           ],
         ),
       ),
@@ -102,5 +98,4 @@ class _HomePageState extends State<HomePage> {
   }
 
 }
-
 
