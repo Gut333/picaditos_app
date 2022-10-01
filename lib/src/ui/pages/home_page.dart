@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:picaditos_app/main.dart';
+import 'package:picaditos_app/src/ui/pages/players_page.dart';
 import '../components/player_button_component.dart';
 import '../components/soccer_arena_component.dart';
 
@@ -22,11 +23,11 @@ class _HomePageState extends State<HomePage> {
         body: Stack(
           children: [
              const SoccerField(),
-            PlayerButtonWidget(buttonColor: Colors.redAccent),
+
             PlayerButtonWidget(buttonColor: Colors.indigo),
-            PlayerButtonWidget(buttonColor: Colors.teal),
-            PlayerButtonWidget(buttonColor: Colors.orangeAccent),
-            PlayerButtonWidget(buttonColor: Colors.lightBlue),
+    //        PlayerButtonWidget(buttonColor: Colors.teal),
+    //        PlayerButtonWidget(buttonColor: Colors.orangeAccent),
+    //        PlayerButtonWidget(buttonColor: Colors.lightBlue),
 
           ],
         ),
@@ -37,6 +38,7 @@ class _HomePageState extends State<HomePage> {
   _customAppBar(){
     return AppBar(
       toolbarHeight: 75,
+      elevation: 0,
       backgroundColor: Colors.transparent,
       shadowColor: Colors.transparent,
       flexibleSpace: Container(
@@ -94,12 +96,23 @@ class _HomePageState extends State<HomePage> {
               borderRadius: const BorderRadius.all(Radius.circular(40)),
               border: Border.all(color: Colors.white,width: 1),
             ),
-            child: const Icon(Icons.shield_sharp,color: Colors.white,size: 35,),
+            child: _materialTest(),
           ),
         ],
       ),
     );
   }
+
+  _materialTest(){
+    return MaterialButton(
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const PlayersPage()));
+
+        }
+    );
+
+  }
+
 
 }
 

@@ -2,12 +2,18 @@
 
 import 'package:flutter/material.dart';
 
+import '../pages/players_page.dart';
+
 class PlayerButtonWidget extends StatefulWidget {
   Color? buttonColor;
+
+
 
    PlayerButtonWidget(
       {Key? key,
         this.buttonColor,
+
+
       }
 
       ) : super(key: key);
@@ -21,7 +27,6 @@ class PlayerButtonWidget extends StatefulWidget {
 
 class _PlayerButtonWidgetState extends State<PlayerButtonWidget> {
   Offset offset = Offset.zero;
-
 
   @override
   Widget build(BuildContext context) {
@@ -55,8 +60,8 @@ class _PlayerButtonWidgetState extends State<PlayerButtonWidget> {
     return Padding(
       padding: const EdgeInsets.all(40.0),
       child: Container(
-        height: 27,
-        width: 27,
+        height: 35,
+        width: 35,
         decoration: BoxDecoration(
           color: widget.buttonColor,
           borderRadius: const BorderRadius.all(Radius.circular(50)),
@@ -68,6 +73,7 @@ class _PlayerButtonWidgetState extends State<PlayerButtonWidget> {
       ),
     );
   }
+
 
 }
 
