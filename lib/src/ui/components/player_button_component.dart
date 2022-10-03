@@ -8,7 +8,6 @@ class PlayerButtonWidget extends StatefulWidget {
   Color? buttonColor;
 
 
-
    PlayerButtonWidget(
       {Key? key,
         this.buttonColor,
@@ -73,7 +72,6 @@ class _PlayerButtonWidgetState extends State<PlayerButtonWidget> {
       ),
     );
   }
-
 
 }
 

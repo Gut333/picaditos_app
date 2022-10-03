@@ -58,7 +58,6 @@ class _PlayerAttributeComponentState extends State<PlayerAttributeComponent> {
         width: 200,
         percent: widget.percentage,
         barRadius: const Radius.circular(20),
-
       ),
     );
 

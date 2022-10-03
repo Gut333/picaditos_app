@@ -1,13 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
-import 'package:picaditos_app/src/ui/components/draw_tactics_component.dart';
-import 'package:picaditos_app/src/ui/components/player_attribute_component.dart';
-import 'package:picaditos_app/src/ui/components/player_button_component.dart';
-import 'package:picaditos_app/src/ui/components/soccer_arena_component.dart';
-import 'dart:ui';
 
+
+import 'package:flutter/material.dart';
 import 'package:picaditos_app/src/ui/pages/home_page.dart';
-import 'package:picaditos_app/src/ui/pages/players_page.dart';
+
 
 // import 'package:mvc_pattern/mvc_pattern.dart';
 

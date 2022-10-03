@@ -19,15 +19,16 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 55, 65, 77),
-        appBar: _customAppBar(),
+        appBar: _customAppBarBody(),
         body: Stack(
           children: [
              const SoccerField(),
 
-            PlayerButtonWidget(buttonColor: Colors.indigo),
-    //        PlayerButtonWidget(buttonColor: Colors.teal),
-    //        PlayerButtonWidget(buttonColor: Colors.orangeAccent),
-    //        PlayerButtonWidget(buttonColor: Colors.lightBlue),
+            PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 193, 245, 79)),
+            PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 22, 148, 251) ),
+            PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 252, 148, 69)),
+            PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 155, 34, 65)),
+            PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 30, 30, 30)  ),
 
           ],
         ),
@@ -35,7 +36,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  _customAppBar(){
+  _customAppBarBody(){
     return AppBar(
       toolbarHeight: 75,
       elevation: 0,
@@ -49,7 +50,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const SizedBox(width: 2,),
-            _circleAppBar(),
+            _teamCircle(),
           ],
         ),
       ),
@@ -57,7 +58,7 @@ class _HomePageState extends State<HomePage> {
 
   }
 
-  _circleAppBar(){
+  _teamCircle(){
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Stack(
@@ -107,13 +108,36 @@ class _HomePageState extends State<HomePage> {
     return MaterialButton(
         onPressed: (){
           Navigator.push(context, MaterialPageRoute(builder: (context) => const PlayersPage()));
-
         }
     );
 
   }
 
 
+
+
 }
 
+////////////CUSTOM COLORS/////////////////
+// CustomLime                           //
+// Color.fromARGB(255, 193, 245, 79)    //
+//                                      //
+// CustomLightGrey                      //
+// Color.fromARGB(255, 55, 65, 77)      //
+//                                      //
+// CustomBlue                           //
+// Color.fromARGB(255, 22, 148, 251)    //
+//                                      //
+// CustomBlackGrey                      //
+// Color.fromARGB(255, 30, 30, 30)      //
+//                                      //
+// CustomRed                            //
+// Color.fromARGB(255, 155, 34, 65)     //
+//                                      //
+// CustomOrange                         //
+// Color.fromARGB(255, 252, 148, 69)    //
+//                                      //
+// CustomWhite                          //
+// Color.fromARGB(255, 233, 231, 236)   //
+//////////////////////////////////////////
 

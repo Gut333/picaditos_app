@@ -8,7 +8,7 @@ class SoccerField extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(15.0),
         child: Container(
           color: const Color.fromARGB(255, 30, 30, 30),
           child: Stack(
