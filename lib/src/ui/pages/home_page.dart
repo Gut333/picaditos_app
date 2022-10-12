@@ -22,13 +22,12 @@ class _HomePageState extends State<HomePage> {
         appBar: _customAppBarBody(),
         body: Stack(
           children: [
-             const SoccerField(),
-
+            const SoccerField(),
             PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 193, 245, 79)),
             PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 22, 148, 251) ),
             PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 252, 148, 69)),
             PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 155, 34, 65)),
-            PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 30, 30, 30)  ),
+            PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 30, 30, 30)),
 
           ],
         ),

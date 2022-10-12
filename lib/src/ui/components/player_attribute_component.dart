@@ -39,8 +39,8 @@ class _PlayerAttributeComponentState extends State<PlayerAttributeComponent> {
     return Text(
       widget.attributeType,
       style: const TextStyle(
-        fontSize: 15,
-        letterSpacing: 2,
+        fontSize: 10,
+        letterSpacing: 1,
         fontWeight: FontWeight.bold,
       ),
     );
@@ -54,8 +54,8 @@ class _PlayerAttributeComponentState extends State<PlayerAttributeComponent> {
         animation: true,
         backgroundColor: const Color.fromARGB(255, 55, 65, 77),
         progressColor: const Color.fromARGB(255, 22, 148, 251),
-        lineHeight: 20,
-        width: 200,
+        lineHeight: 10,
+        width: 100,
         percent: widget.percentage,
         barRadius: const Radius.circular(20),
       ),

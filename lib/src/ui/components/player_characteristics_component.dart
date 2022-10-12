@@ -18,10 +18,9 @@ class _PlayerCharacteristicsState extends State<PlayerCharacteristics> {
 
   _attributesBody(){
     return Padding(
-      padding: const EdgeInsets.all(4.0),
+      padding: const EdgeInsets.all(10.0),
       child: Container(
         color: const Color.fromARGB(255, 233, 231, 236)  ,
-        height: 300,
         width: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -46,7 +45,7 @@ class _PlayerCharacteristicsState extends State<PlayerCharacteristics> {
   _customText(String text){
     return Text(text,
       style: const TextStyle(
-        fontSize: 15,
+        fontSize: 12,
         letterSpacing: 2,
         fontWeight: FontWeight.bold,
       ),

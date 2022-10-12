@@ -46,18 +46,26 @@ class _PlayerCardState extends State<PlayerCard> {
 
   _playerName(){
     return Container(
+<<<<<<< Updated upstream
       height: 50,
       width: 250,
+=======
+      height: 30,
+      width: 200,
+>>>>>>> Stashed changes
       decoration: const BoxDecoration(
-          color: Colors.orangeAccent,
+          color: Color.fromARGB(255, 252, 148, 69),
           borderRadius:BorderRadius.all(Radius.circular(60))),
       child: Center(
-        child: _customText(),
+        child: CustomTextStyleFontSize15(
+          text: widget.playerName,
+        ),
       ),
     );
 
   }
 
+<<<<<<< Updated upstream
   _customText(){
     return Text(
       widget.playerName,
@@ -70,7 +78,35 @@ class _PlayerCardState extends State<PlayerCard> {
   }
 
 
+=======
+
+  _playerCircle(){
+    return Padding(
+      padding: const EdgeInsets.all(2.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: 130,
+            height: 130,
+            decoration: BoxDecoration(
+                color: Colors.orangeAccent,
+                border: Border.all(color: Colors.black,width: 2.0),
+                borderRadius: const BorderRadius.all(Radius.circular(100))
+            ),
+            child: const Icon(Icons.person),
+          ),
+        ],
+      ),
+    );
+  }
+>>>>>>> Stashed changes
 
 
 
 }
+
+
+
+
