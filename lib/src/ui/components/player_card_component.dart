@@ -47,7 +47,7 @@ class _PlayerCardState extends State<PlayerCard> {
   _playerName(){
     return Container(
       height: 50,
-      width: 300,
+      width: 250,
       decoration: const BoxDecoration(
           color: Colors.orangeAccent,
           borderRadius:BorderRadius.all(Radius.circular(60))),
@@ -62,34 +62,14 @@ class _PlayerCardState extends State<PlayerCard> {
     return Text(
       widget.playerName,
       style: const TextStyle(
-        fontSize: 15,
+        fontSize: 12,
         letterSpacing: 2,
         fontWeight: FontWeight.bold,
       ),
     );
   }
 
-  _playerCircle(){
-    return Padding(
-      padding: const EdgeInsets.all(2.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            width: 130,
-            height: 130,
-            decoration: BoxDecoration(
-                color: Colors.orangeAccent,
-                border: Border.all(color: Colors.black,width: 2.0),
-                borderRadius: const BorderRadius.all(Radius.circular(100))
-            ),
-            child: Icon(Icons.person),
-          ),
-        ],
-      ),
-    );
-  }
+
 
 
 

@@ -29,8 +29,8 @@ class _PlayerAttributeComponentState extends State<PlayerAttributeComponent> {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        _customText(),
-        _customPercentIndicator(),
+        Expanded(child: _customText()),
+        Expanded(child: _customPercentIndicator()),
       ],
     );
   }

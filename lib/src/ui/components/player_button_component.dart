@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-import '../pages/players_page.dart';
 
 class PlayerButtonWidget extends StatefulWidget {
   Color? buttonColor;
@@ -11,8 +10,6 @@ class PlayerButtonWidget extends StatefulWidget {
    PlayerButtonWidget(
       {Key? key,
         this.buttonColor,
-
-
       }
 
       ) : super(key: key);
@@ -72,6 +69,16 @@ class _PlayerButtonWidgetState extends State<PlayerButtonWidget> {
       ),
     );
   }
+
+}
+
+class PlayerModel{
+  String? name;
+
+  PlayerModel({
+    required this.name,
+  });
+
 
 }
 

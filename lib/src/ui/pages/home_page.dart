@@ -97,20 +97,26 @@ class _HomePageState extends State<HomePage> {
               borderRadius: const BorderRadius.all(Radius.circular(40)),
               border: Border.all(color: Colors.white,width: 1),
             ),
-            child: _goToPlayersPage(),
+            child: GestureDetector(
+              onTap: _controllerToPlayersPage,
+            ),
           ),
         ],
       ),
     );
   }
 
-  _goToPlayersPage(){
-    return MaterialButton(
-        onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context) => const PlayersPage()));
-        }
-    );
 
+
+  void _controllerToPlayersPage(){
+    setState(() {
+
+      final route = MaterialPageRoute(builder: (BuildContext context){
+
+        return const PlayersPage();
+      });
+      Navigator.of(context).push(route);
+    });
   }
 
 
