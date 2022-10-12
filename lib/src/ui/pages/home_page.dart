@@ -97,14 +97,14 @@ class _HomePageState extends State<HomePage> {
               borderRadius: const BorderRadius.all(Radius.circular(40)),
               border: Border.all(color: Colors.white,width: 1),
             ),
-            child: _materialTest(),
+            child: _goToPlayersPage(),
           ),
         ],
       ),
     );
   }
 
-  _materialTest(){
+  _goToPlayersPage(){
     return MaterialButton(
         onPressed: (){
           Navigator.push(context, MaterialPageRoute(builder: (context) => const PlayersPage()));
@@ -112,6 +112,12 @@ class _HomePageState extends State<HomePage> {
     );
 
   }
+
+
+
+
+
+
 
 
 

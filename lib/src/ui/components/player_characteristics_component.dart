@@ -33,7 +33,7 @@ class _PlayerCharacteristicsState extends State<PlayerCharacteristics> {
             PlayerAttributeComponent(attributeType: "DEFENSA", percentage: 0.5),
             PlayerAttributeComponent(attributeType: "CONTROL DE PELOTA", percentage: 0.7),
             PlayerAttributeComponent(attributeType: "MANO A MANO", percentage: 0.2),
-            PlayerAttributeComponent(attributeType: "REMATE MEDIA DISTANCIA", percentage: 0.8),
+            PlayerAttributeComponent(attributeType: "REMATE", percentage: 0.8),
 
           ],
         ),
