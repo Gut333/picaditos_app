@@ -11,26 +11,40 @@ class _DrawTacticsState extends State<DrawTactics> {
 
   @override
   Widget build(BuildContext context) {
+
+    return Container(
+      color: Colors.transparent,
+      child: Stack(
+        children: [
+          _gestureDetector(),
+          Container(height: 10,width: 10,child: Icon(Icons.add_circle),),
+        ],
+      ),
+
+    );
+
+  }
+
+  Widget _gestureDetector(){
     return GestureDetector(
-        onPanDown: (details) => _startStroke(
-          details.localPosition.dx,
-          details.localPosition.dy,
-        ),
-        onPanUpdate: (details) => _moveStroke(
-          details.localPosition.dx,
-          details.localPosition.dy,
-        ),
-        onDoubleTap: _cleanStroke,
+      onPanDown: (details) => _startStroke(
+        details.localPosition.dx,
+        details.localPosition.dy,
+      ),
+      onPanUpdate: (details) => _moveStroke(
+        details.localPosition.dx,
+        details.localPosition.dy,
+      ),
+      onDoubleTap: _cleanStroke,
 
-        child: SizedBox(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          child: CustomPaint(
-            painter: DrawingPainter(_strokes),
-          ),
+      child: SizedBox(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: CustomPaint(
+          painter: DrawingPainter(_strokes),
         ),
-      );
-
+      ),
+    );
   }
 
   void _startStroke(double x, double y) {
@@ -63,7 +77,7 @@ class DrawingPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     for (final stroke in strokes) {
       final paint = Paint()
-        ..strokeWidth = 6
+        ..strokeWidth = 5
         ..color = const Color.fromARGB(255, 155, 34, 65)
         ..style = PaintingStyle.stroke
         ..strokeCap = StrokeCap.round;

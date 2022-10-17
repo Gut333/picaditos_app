@@ -72,8 +72,6 @@ class _PlayerCardState extends State<PlayerCard> {
   }
 
 
-
-
   _playerCircle(){
     return Padding(
       padding: const EdgeInsets.all(2.0),

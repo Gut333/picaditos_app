@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
 
   _customAppBarBody(){
     return AppBar(
-      toolbarHeight: 75,
+      toolbarHeight: 55,
       elevation: 0,
       backgroundColor: Colors.transparent,
       shadowColor: Colors.transparent,
@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(width: 30,),
               Container(
                 height: 40,
-                width: 200,
+                width: 150,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 155, 34, 65),
                   borderRadius: const BorderRadius.all(Radius.circular(40)),
@@ -89,8 +89,8 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           Container(
-            height: 50,
-            width: 50,
+            height: 40,
+            width: 40,
             decoration: BoxDecoration(
               color: const Color.fromARGB(255, 155, 34, 65),
               borderRadius: const BorderRadius.all(Radius.circular(40)),
