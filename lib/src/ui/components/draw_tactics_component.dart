@@ -63,7 +63,14 @@ class _DrawTacticsState extends State<DrawTactics> {
     });
 
   }
-  
+
+  void _goback(){
+    setState(() {
+
+
+    });
+  }
+
 }
 
 class DrawingPainter extends CustomPainter {
