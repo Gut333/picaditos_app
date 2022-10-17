@@ -13,7 +13,7 @@ class SoccerField extends StatelessWidget {
           color: const Color.fromARGB(255, 30, 30, 30),
           child: Stack(
             children: [
-              _fieldBorderLines(),
+              _body(),
               DrawTactics(),
             ],
           ),
@@ -22,7 +22,29 @@ class SoccerField extends StatelessWidget {
     );
   }
 
-  _fieldBorderLines(){
+  Widget _body(){
+    return Container(
+      child: Column(
+        children: [
+          Expanded(flex: 1, child: _drawIconModule()),
+          Expanded(flex: 18, child: _fieldBorderLines()),
+        ],
+      ),
+    );
+  }
+
+  Widget _drawIconModule(){
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Icon(Icons.keyboard_arrow_left,color: Colors.white),
+        Icon(Icons.keyboard_arrow_right,color: Colors.white),
+      ],
+      );
+
+}
+
+  Widget _fieldBorderLines(){
     return Container(
       decoration: BoxDecoration(
         border: Border.all(
@@ -42,7 +64,7 @@ class SoccerField extends StatelessWidget {
 
   }
 
-  _fieldGoalBoxTop(){
+  Widget _fieldGoalBoxTop(){
     return Container(
       width: 150,
       height: 50,
@@ -60,7 +82,7 @@ class SoccerField extends StatelessWidget {
     );
   }
 
-  _fieldCenterLine(){
+  Widget _fieldCenterLine(){
     return Container(
       height: 2,
       width: double.infinity,
@@ -69,7 +91,7 @@ class SoccerField extends StatelessWidget {
 
   }
 
-  _fieldGoalBoxBottom(){
+  Widget _fieldGoalBoxBottom(){
     return Container(
       width: 150,
       height: 50,

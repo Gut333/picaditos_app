@@ -17,7 +17,6 @@ class _DrawTacticsState extends State<DrawTactics> {
       child: Stack(
         children: [
           _gestureDetector(),
-          Container(height: 10,width: 10,child: Icon(Icons.add_circle),),
         ],
       ),
 
@@ -64,9 +63,7 @@ class _DrawTacticsState extends State<DrawTactics> {
     });
 
   }
-
-
-
+  
 }
 
 class DrawingPainter extends CustomPainter {
