@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 55, 65, 77),
-        appBar: _customAppBarBody(),
+        appBar: _appBarBody(),
         body: Stack(
           children: [
             const SoccerField(),
@@ -28,14 +28,13 @@ class _HomePageState extends State<HomePage> {
             PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 252, 148, 69)),
             PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 155, 34, 65)),
             PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 30, 30, 30)),
-
           ],
         ),
       ),
     );
   }
 
-  _customAppBarBody(){
+  _appBarBody(){
     return AppBar(
       toolbarHeight: 55,
       elevation: 0,
@@ -49,7 +48,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const SizedBox(width: 2,),
-            _teamCircle(),
+            _appBarCell(),
           ],
         ),
       ),
@@ -57,7 +56,7 @@ class _HomePageState extends State<HomePage> {
 
   }
 
-  _teamCircle(){
+  _appBarCell(){
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Stack(
@@ -106,7 +105,6 @@ class _HomePageState extends State<HomePage> {
   }
 
 
-
   void _controllerToPlayersPage(){
     setState(() {
 
@@ -117,11 +115,6 @@ class _HomePageState extends State<HomePage> {
       Navigator.of(context).push(route);
     });
   }
-
-
-
-
-
 
 
 

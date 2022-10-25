@@ -19,7 +19,6 @@ class _DrawTacticsState extends State<DrawTactics> {
           _gestureDetector(),
         ],
       ),
-
     );
 
   }
@@ -62,13 +61,6 @@ class _DrawTacticsState extends State<DrawTactics> {
 
     });
 
-  }
-
-  void _goback(){
-    setState(() {
-
-
-    });
   }
 
 }

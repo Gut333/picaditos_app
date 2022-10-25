@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-
 class PlayerButtonWidget extends StatefulWidget {
   Color? buttonColor;
 
@@ -17,7 +16,6 @@ class PlayerButtonWidget extends StatefulWidget {
 
   @override
   State<PlayerButtonWidget> createState() => _PlayerButtonWidgetState();
-
 
 }
 
