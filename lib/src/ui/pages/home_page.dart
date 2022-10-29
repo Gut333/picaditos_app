@@ -94,6 +94,7 @@ class _HomePageState extends State<HomePage> {
               color: const Color.fromARGB(255, 155, 34, 65),
               borderRadius: const BorderRadius.all(Radius.circular(40)),
               border: Border.all(color: Colors.white,width: 1),
+              image: 
             ),
             child: GestureDetector(
               onTap: _controllerToPlayersPage,
