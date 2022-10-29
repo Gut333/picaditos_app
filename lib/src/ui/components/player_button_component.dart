@@ -44,8 +44,8 @@ class _PlayerButtonWidgetState extends State<PlayerButtonWidget> {
     return Padding(
       padding: const EdgeInsets.all(40.0),
       child: Container(
-        height: 35,
-        width: 35,
+        height: 25,
+        width: 25,
         decoration: BoxDecoration(
           color: widget.buttonColor,
           borderRadius: const BorderRadius.all(Radius.circular(50)),

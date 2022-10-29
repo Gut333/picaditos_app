@@ -22,15 +22,27 @@ class _HomePageState extends State<HomePage> {
           children: [
             const SoccerField(),
             PlayerButtonWidget(
-                buttonColor: const Color.fromARGB(255, 193, 245, 79)),
+                buttonColor: const Color.fromARGB(255, 22, 148, 251)),
             PlayerButtonWidget(
                 buttonColor: const Color.fromARGB(255, 22, 148, 251)),
             PlayerButtonWidget(
-                buttonColor: const Color.fromARGB(255, 252, 148, 69)),
+                buttonColor: const Color.fromARGB(255, 155, 34, 65)),
             PlayerButtonWidget(
                 buttonColor: const Color.fromARGB(255, 155, 34, 65)),
             PlayerButtonWidget(
-                buttonColor: const Color.fromARGB(255, 30, 30, 30)),
+                buttonColor: const Color.fromARGB(255, 155, 34, 65)),
+            PlayerButtonWidget(
+                buttonColor: const Color.fromARGB(255, 155, 34, 65)),
+            PlayerButtonWidget(
+                buttonColor: const Color.fromARGB(255, 22, 148, 251)),
+            PlayerButtonWidget(
+                buttonColor: const Color.fromARGB(255, 22, 148, 251)),
+            PlayerButtonWidget(
+                buttonColor: const Color.fromARGB(255, 22, 148, 251)),
+            PlayerButtonWidget(
+                buttonColor: const Color.fromARGB(255, 22, 148, 251)),
+            PlayerButtonWidget(
+                buttonColor: const Color.fromARGB(255, 155, 34, 65)),
           ],
         ),
       ),

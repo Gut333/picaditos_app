@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class DrawTactics extends StatefulWidget {
   @override
   _DrawTacticsState createState() => _DrawTacticsState();
@@ -11,7 +10,6 @@ class _DrawTacticsState extends State<DrawTactics> {
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
       color: Colors.transparent,
       child: Stack(
@@ -20,10 +18,9 @@ class _DrawTacticsState extends State<DrawTactics> {
         ],
       ),
     );
-
   }
 
-  Widget _gestureDetector(){
+  Widget _gestureDetector() {
     return GestureDetector(
       onPanDown: (details) => _startStroke(
         details.localPosition.dx,
@@ -34,7 +31,6 @@ class _DrawTacticsState extends State<DrawTactics> {
         details.localPosition.dy,
       ),
       onDoubleTap: _cleanStroke,
-
       child: SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -55,14 +51,11 @@ class _DrawTacticsState extends State<DrawTactics> {
     });
   }
 
-  void _cleanStroke(){
+  void _cleanStroke() {
     setState(() {
       _strokes.clear();
-
     });
-
   }
-
 }
 
 class DrawingPainter extends CustomPainter {
@@ -74,7 +67,7 @@ class DrawingPainter extends CustomPainter {
     for (final stroke in strokes) {
       final paint = Paint()
         ..strokeWidth = 5
-        ..color = const Color.fromARGB(255, 155, 34, 65)
+        ..color = const Color.fromARGB(255, 233, 231, 236)
         ..style = PaintingStyle.stroke
         ..strokeCap = StrokeCap.round;
 
