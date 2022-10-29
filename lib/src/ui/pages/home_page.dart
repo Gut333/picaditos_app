@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:picaditos_app/main.dart';
 import 'package:picaditos_app/src/ui/pages/players_page.dart';
@@ -13,7 +12,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -23,18 +21,23 @@ class _HomePageState extends State<HomePage> {
         body: Stack(
           children: [
             const SoccerField(),
-            PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 193, 245, 79)),
-            PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 22, 148, 251) ),
-            PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 252, 148, 69)),
-            PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 155, 34, 65)),
-            PlayerButtonWidget(buttonColor: const Color.fromARGB(255, 30, 30, 30)),
+            PlayerButtonWidget(
+                buttonColor: const Color.fromARGB(255, 193, 245, 79)),
+            PlayerButtonWidget(
+                buttonColor: const Color.fromARGB(255, 22, 148, 251)),
+            PlayerButtonWidget(
+                buttonColor: const Color.fromARGB(255, 252, 148, 69)),
+            PlayerButtonWidget(
+                buttonColor: const Color.fromARGB(255, 155, 34, 65)),
+            PlayerButtonWidget(
+                buttonColor: const Color.fromARGB(255, 30, 30, 30)),
           ],
         ),
       ),
     );
   }
 
-  _appBarBody(){
+  _appBarBody() {
     return AppBar(
       toolbarHeight: 55,
       elevation: 0,
@@ -47,40 +50,44 @@ class _HomePageState extends State<HomePage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const SizedBox(width: 2,),
+            const SizedBox(
+              width: 2,
+            ),
             _appBarCell(),
           ],
         ),
       ),
     );
-
   }
 
-  _appBarCell(){
+  _appBarCell() {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Stack(
         children: [
           Row(
             children: [
-              const SizedBox(width: 30,),
+              const SizedBox(
+                width: 30,
+              ),
               Container(
                 height: 40,
                 width: 150,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 155, 34, 65),
                   borderRadius: const BorderRadius.all(Radius.circular(40)),
-                  border: Border.all(color: Colors.white,width: 1),
-                  gradient: const LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 55, 65, 77),
-                        Color.fromARGB(255, 155, 34, 65)]),
+                  border: Border.all(color: Colors.white, width: 1),
+                  gradient: const LinearGradient(colors: [
+                    Color.fromARGB(255, 55, 65, 77),
+                    Color.fromARGB(255, 155, 34, 65)
+                  ]),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    Text("TEAM MAFUBA",
-                      style: TextStyle(color: Colors.white,fontSize: 13),
+                    Text(
+                      "Atletico Lamadrid",
+                      style: TextStyle(color: Colors.white, fontSize: 13),
                     ),
                   ],
                 ),
@@ -93,11 +100,11 @@ class _HomePageState extends State<HomePage> {
             decoration: BoxDecoration(
               color: const Color.fromARGB(255, 155, 34, 65),
               borderRadius: const BorderRadius.all(Radius.circular(40)),
-              border: Border.all(color: Colors.white,width: 1),
-              image: 
+              border: Border.all(color: Colors.white, width: 1),
             ),
-            child: GestureDetector(
-              onTap: _controllerToPlayersPage,
+            child: ClipRRect(
+              borderRadius: const BorderRadius.all(Radius.circular(20)),
+              child: Image.asset('assets/LamadridEscudo.jpg'),
             ),
           ),
         ],
@@ -105,22 +112,14 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-
-  void _controllerToPlayersPage(){
+  void _controllerToPlayersPage() {
     setState(() {
-
-      final route = MaterialPageRoute(builder: (BuildContext context){
-
+      final route = MaterialPageRoute(builder: (BuildContext context) {
         return const PlayersPage();
       });
       Navigator.of(context).push(route);
     });
   }
-
-
-
-
-
 }
 
 ////////////CUSTOM COLORS/////////////////
