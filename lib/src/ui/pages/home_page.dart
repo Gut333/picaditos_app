@@ -16,33 +16,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 55, 65, 77),
+        backgroundColor: Color.fromARGB(255, 55, 65, 77),
         appBar: _appBarBody(),
         body: Stack(
           children: [
             const SoccerField(),
             PlayerButtonWidget(
+                buttonSize: 30,
                 buttonColor: const Color.fromARGB(255, 22, 148, 251)),
-            PlayerButtonWidget(
-                buttonColor: const Color.fromARGB(255, 22, 148, 251)),
-            PlayerButtonWidget(
-                buttonColor: const Color.fromARGB(255, 155, 34, 65)),
-            PlayerButtonWidget(
-                buttonColor: const Color.fromARGB(255, 155, 34, 65)),
-            PlayerButtonWidget(
-                buttonColor: const Color.fromARGB(255, 155, 34, 65)),
-            PlayerButtonWidget(
-                buttonColor: const Color.fromARGB(255, 155, 34, 65)),
-            PlayerButtonWidget(
-                buttonColor: const Color.fromARGB(255, 22, 148, 251)),
-            PlayerButtonWidget(
-                buttonColor: const Color.fromARGB(255, 22, 148, 251)),
-            PlayerButtonWidget(
-                buttonColor: const Color.fromARGB(255, 22, 148, 251)),
-            PlayerButtonWidget(
-                buttonColor: const Color.fromARGB(255, 22, 148, 251)),
-            PlayerButtonWidget(
-                buttonColor: const Color.fromARGB(255, 155, 34, 65)),
           ],
         ),
       ),
@@ -133,6 +114,8 @@ class _HomePageState extends State<HomePage> {
     });
   }
 }
+
+
 
 ////////////CUSTOM COLORS/////////////////
 // CustomLime                           //

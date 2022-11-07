@@ -1,13 +1,18 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:picaditos_app/src/models/player_model.dart';
 
 class PlayerButtonWidget extends StatefulWidget {
   Color? buttonColor;
+  PlayerModel? player;
+  double? buttonSize;
 
   PlayerButtonWidget({
     Key? key,
     this.buttonColor,
+    this.player,
+    this.buttonSize,
   }) : super(key: key);
 
   @override
@@ -20,16 +25,16 @@ class _PlayerButtonWidgetState extends State<PlayerButtonWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: _playerMovement(),
+      child: _buttonMovement(),
     );
   }
 
-  _playerMovement() {
+  _buttonMovement() {
     return Positioned(
       left: offset.dx,
       top: offset.dy,
       child: GestureDetector(
-        child: _playerCircle(),
+        child: _buttonBody(),
         onPanUpdate: (details) {
           setState(() {
             offset = Offset(
@@ -40,12 +45,12 @@ class _PlayerButtonWidgetState extends State<PlayerButtonWidget> {
     );
   }
 
-  _playerCircle() {
+  _buttonBody() {
     return Padding(
       padding: const EdgeInsets.all(40.0),
       child: Container(
-        height: 25,
-        width: 25,
+        height: widget.buttonSize,
+        width: widget.buttonSize,
         decoration: BoxDecoration(
           color: widget.buttonColor,
           borderRadius: const BorderRadius.all(Radius.circular(50)),
